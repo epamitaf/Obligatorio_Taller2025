@@ -53,3 +53,17 @@ Para indicar el uso de espacio en disco de los servidores Ubuntu es neceario eje
 
 Para poder instalar y configurar apache en el servidor web fue necesario realizar un playbook que despliegue 
 
+
+
+
+
+
+
+
+
+COSAS PARA AGREGAR A ESTE INSTRUCTIVO!!! 
+Detallas las colecciones usadas y el comanod para instalarla.
+---- !!! Agregar un group_vars con el usuario " ansible_user: sysadmin"
+
+
+

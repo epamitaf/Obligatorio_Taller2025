@@ -20,8 +20,7 @@
   - name: Allow SSH
     community.general.ufw:
       rule: allow
-      port: "22"
-      proto: tcp
+      name: OpenSSH
 
   - name: Enable UFW
     community.general.ufw:
