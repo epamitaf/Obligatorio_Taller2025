@@ -31,3 +31,8 @@
       key: /home/sysadmin/.ssh/authorized_keys
       user: sysadmin
       state: present 
+
+
+  - name: Login public/private
+    ansible.builtin.lineinfile:
+      expreg:"^"
