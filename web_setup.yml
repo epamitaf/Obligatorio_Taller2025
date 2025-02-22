@@ -49,7 +49,7 @@
       owner: root
       group: root
       mode: '0644'
-    notify: Reiniciar Apache
+    notify: Restart Apache Service
 
   - name: Index.html
     ansible.builtin.template:
@@ -61,7 +61,7 @@
 
   handlers:
 
-  - name: Reiniciar Apache
+  - name: Restart Apache Service 
     ansible.builtin.service:
       name: httpd
       state: restarted

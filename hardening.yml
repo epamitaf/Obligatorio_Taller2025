@@ -7,17 +7,17 @@
 
   tasks:
 
-  - name: Install ufw # Instala ufw en caso de que no este presente en el servidor
+  - name: Install UFW # Instala ufw en caso de que no este presente en el servidor
     ansible.builtin.apt:
       name: ufw
       state: present
 
-  - name: Deny every incoming conection 
+  - name: Deny every incoming connection 
     community.general.ufw:
       direction: incoming
       policy: deny
 
-  - name: Allow SSH
+  - name: Allow SSH connections
     community.general.ufw:
       rule: allow
       name: OpenSSH
@@ -26,13 +26,26 @@
     community.general.ufw:
       state: enabled
 
-  - name: Check Authorized key exist
+  - name: Check authorized_key exist
     ansible.posix.authorized_key:
-      key: /home/sysadmin/.ssh/authorized_keys
       user: sysadmin
-      state: present 
+      state: present
+      key: "{{ lookup('file', '/home/sysadmin/.ssh/id_rsa.pub') }}" 
 
 
-  - name: Login public/private
+  - name: Login only with public/private key
     ansible.builtin.lineinfile:
-      expreg:"^"
+      path: /etc/ssh/sshd_config
+      regexp: '^#PasswordAuthentication'
+      line: PasswordAuthentication no
+    notify: Restart SSH service
+
+
+  handlers:
+
+  - name: Restart SSH service
+    ansible.builtin.service:
+      name: ssh
+      state: restarted     
+
+    
