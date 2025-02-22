@@ -1,0 +1,12 @@
+<html>
+	<head>
+		<title> Bienvenido a www.ejemplo.com.uy </title>
+	</head>
+	<body>
+		<h1> Aqui podes encontrar informacion contenida en el servidor "{{ ansible_hostname }}"</h>
+		<br>
+		<p> Esta es una prueba de que el playbook ejecutado desde el equipo bastion funciona. </p>
+		<p> Permitiendo acceder a la informacion proporcionada referida al servidor actual ("{{ ansible_hostname }}") y su correspondiente direccion IP "{{ ansible_all_ipv4_addresses[0] }}" </p>
+	</body>
+</html>
+

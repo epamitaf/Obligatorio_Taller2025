@@ -1,0 +1,67 @@
+---
+# Playbook para instalar Apache en servidor Centos
+
+- name: Deploy Apache webserver at CentOS
+  hosts: webserver
+  become: true    # agrega sudo a la ejecucion de la tarea remota
+
+  tasks:
+ 
+  - name: Ensure Apache is present (httpd)
+    ansible.builtin.yum: # modulo instalado en ansible-core, buena practica indicarlo con el nombre completo
+      name: httpd
+      state: present  # chequea que httpd este presente si no lo instala
+
+  - name: Start and Enable Apache
+    ansible.builtin.systemd_service: # modulo instalado en ansible-core
+      name: httpd
+      state: started
+      enabled: true
+
+  - name: Enable firewall  (http and https)
+    ansible.posix.firewalld: # modulo instalado previamente desde playbook requirements.yml
+      service: "{{ item }}" # toma http y https hasta que la cantidad de elementos del loop se terminen de realizar
+      state: enabled
+      permanent: true
+      immediate: true # inicia el servicio de forma inmediata de otro modo deberia reiniciar firewalld
+    loop: [http,https] # vuelve a ejectarlo hasta que los dos servicios esten activos
+
+  - name: Add information to host file
+    ansible.builtin.lineinfile:
+      path: /etc/hosts
+      line: "192.168.56.20 www.ejemplo.com.uy"
+      state: present
+    delegate_to: localhost
+    connection: local
+
+  - name: Create Directory for Virtual Host
+    ansible.builtin.file:
+      path: "/var/www/ejemplo/html" # crea el directorio
+      state: directory
+      owner: apache
+      group: apache
+      mode: '0755'
+
+  - name: Virtual Host
+    ansible.builtin.template:
+      src: ./templates/virtualhost.j2
+      dest: "/etc/httpd/conf.d/ejemplo.conf" # copia la configuracion realizada en el archivo virtualhost.j2 en la ubicacion especifica del webserver
+      owner: root
+      group: root
+      mode: '0644'
+    notify: Reiniciar Apache
+
+  - name: Index.html
+    ansible.builtin.template:
+      src: ./templates/index.j2
+      dest: "/var/www/ejemplo/html/index.html" # copia la pagina index realizada previamente
+      owner: apache
+      group: apache
+      mode: '0644'
+
+  handlers:
+
+  - name: Reiniciar Apache
+    ansible.builtin.service:
+      name: httpd
+      state: restarted

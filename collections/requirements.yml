@@ -1,0 +1,3 @@
+collections: # nuevas colecciones de ansible ademas de la ansible-core
+- ansible.posix # para agregar firewalld
+- community.general # para agregar ufw

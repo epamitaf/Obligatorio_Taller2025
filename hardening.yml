@@ -1,0 +1,34 @@
+---
+# Playbook para cambiar configuracion de firewall en Ubuntu
+
+- name: Change ufw 
+  hosts: ubuntu
+  become: true
+
+  tasks:
+
+  - name: Install ufw # Instala ufw en caso de que no este presente en el servidor
+    ansible.builtin.apt:
+      name: ufw
+      state: present
+
+  - name: Deny every incoming conection 
+    community.general.ufw:
+      direction: incoming
+      policy: deny
+
+  - name: Allow SSH
+    community.general.ufw:
+      rule: allow
+      port: "22"
+      proto: tcp
+
+  - name: Enable UFW
+    community.general.ufw:
+      state: enabled
+
+  - name: Check Authorized key exist
+    ansible.posix.authorized_key:
+      key: /home/sysadmin/.ssh/authorized_keys
+      user: sysadmin
+      state: present 
