@@ -32,6 +32,36 @@ En el servidor Centos que usamos de bastion clonamos el repositorio creado anter
 
 Luego de realizados los cambios permitenentes, ejecutamos el comando `git add .` agregarando los cambios realizados hasta ese momento. Una vez realizado esto, pasamos a ejecutar el comando `git commit -m "comentario"` para indicar los cambios realizados. Luego, para realizar la sicronizacion del repositorio local con el repositorio remoto, ejecutamos el comando `git push`.
 
+> ### Pruebas comandos adhoc
 
 
+
+<div>
+<p align:"center">
+<img src="https://github.com/epamitaf/Obligatorio_Taller2025/blob/main/images/1%20ansibleping.png" alt="JuveYell" width="300px">
+</p>
+</div>
+
+
+
+<div>
+<p align:"center">
+<img src="https://github.com/epamitaf/Obligatorio_Taller2025/blob/main/images/2%20uptime.png" alt="JuveYell" width="300px">
+</p>
+</div>
+
+
+<div>
+<p align:"center">
+<img src="https://github.com/epamitaf/Obligatorio_Taller2025/blob/main/images/3%20instalacion%20apache.png" alt="JuveYell" width="300px">
+</p>
+</div>
+
+
+
+<div>
+<p align:"center">
+<img src="https://github.com/epamitaf/Obligatorio_Taller2025/blob/main/images/4%20espacio%20en%20disco%20ubuntu.png" alt="JuveYell" width="300px">
+</p>
+</div>
 
