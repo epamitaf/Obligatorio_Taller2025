@@ -30,19 +30,19 @@ Luego de realizados los cambios permitenentes, ejecutamos el comando `git add .`
 
 > ### Pruebas comandos adhoc
 
-Para chequear que el inventario esta funcionando de forma correcta y que la conexion a los servidores indicados en este es satisfactoria, ejecutamos el comando `ansible all -i inventories/inventory.ini -m ping`
+Para chequear que el inventario esta funcionando de forma correcta y que la conexion a los servidores indicados en este es satisfactoria, ejecutamos el comando `ansible all -i inventories/inventory.ini -m ping`.
 
 ![ping ansible](images/ansibleping.png)
 
-Para verificar el tiempo de actividad de los servidores es necesario ejecutar el comando `ansible -i inventories/inventory.ini all -m command -a "uptime"`
+Para verificar el tiempo de actividad de los servidores es necesario ejecutar el comando `ansible -i inventories/inventory.ini all -m command -a "uptime"`.
 
 ![uotime image](images/uptime.png)
 
-Para instalar apache en los servidores web es necesario ejecutar el comando `ansible -i inventories/inventory.ini webserver -m yum -a "name=httpd" --become --ask-become-pass`
+Para instalar apache en los servidores web es necesario ejecutar el comando `ansible -i inventories/inventory.ini webserver -m yum -a "name=httpd" --become --ask-become-pass`.
 
 ![instalacion de apache](images/installapache.png)
 
-Para indicar el uso de espacio en disco de los servidores Ubuntu es neceario ejecutar el comando `ansible -i inventories/inventory.ini ubuntu -m command -a "df -h"`
+Para indicar el uso de espacio en disco de los servidores Ubuntu es neceario ejecutar el comando `ansible -i inventories/inventory.ini ubuntu -m command -a "df -h"`.
 
 ![espacio en disco ubuntu](images/diskubuntu.png)
 
