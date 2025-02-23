@@ -53,7 +53,7 @@ Luego de realizados los cambios permitenentes, ejecutamos el comando `git add .`
 
 <div>
 <p align:"center">
-<img src="https://github.com/epamitaf/Obligatorio_Taller2025/blob/main/images/3%20instalacion%20apache.png" alt="JuveYell" width="600px">
+<img src="https://github.com/epamitaf/Obligatorio_Taller2025/blob/main/images/3%20instalacion%20apache.png" alt="JuveYell" width="700px">
 </p>
 </div>
 
