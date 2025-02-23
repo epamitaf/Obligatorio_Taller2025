@@ -38,7 +38,7 @@ Luego de realizados los cambios permitenentes, ejecutamos el comando `git add .`
 
 <div>
 <p align:"center">
-<img src="https://github.com/epamitaf/Obligatorio_Taller2025/blob/main/images/1%20ansibleping.png" alt="JuveYell" width="400px">
+<img src="https://github.com/epamitaf/Obligatorio_Taller2025/blob/main/images/1%20ansibleping.png" alt="JuveYell" width="500px">
 </p>
 </div>
 
@@ -46,14 +46,14 @@ Luego de realizados los cambios permitenentes, ejecutamos el comando `git add .`
 
 <div>
 <p align:"center">
-<img src="https://github.com/epamitaf/Obligatorio_Taller2025/blob/main/images/2%20uptime.png" alt="JuveYell" width="300px">
+<img src="https://github.com/epamitaf/Obligatorio_Taller2025/blob/main/images/2%20uptime.png" alt="JuveYell" width="500px">
 </p>
 </div>
 
 
 <div>
 <p align:"center">
-<img src="https://github.com/epamitaf/Obligatorio_Taller2025/blob/main/images/3%20instalacion%20apache.png" alt="JuveYell" width="300px">
+<img src="https://github.com/epamitaf/Obligatorio_Taller2025/blob/main/images/3%20instalacion%20apache.png" alt="JuveYell" width="500px">
 </p>
 </div>
 
@@ -61,7 +61,7 @@ Luego de realizados los cambios permitenentes, ejecutamos el comando `git add .`
 
 <div>
 <p align:"center">
-<img src="https://github.com/epamitaf/Obligatorio_Taller2025/blob/main/images/4%20espacio%20en%20disco%20ubuntu.png" alt="JuveYell" width="300px">
+<img src="https://github.com/epamitaf/Obligatorio_Taller2025/blob/main/images/4%20espacio%20en%20disco%20ubuntu.png" alt="JuveYell" width="500px">
 </p>
 </div>
 
