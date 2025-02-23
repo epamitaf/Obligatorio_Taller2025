@@ -46,3 +46,10 @@ Para indicar el uso de espacio en disco de los servidores Ubuntu es neceario eje
 
 ![espacio en disco ubuntu](images/diskubuntu.png)
 
+
+> ### Creacion de Playbooks
+
+> ### web_setup.yml
+
+Para poder instalar y configurar apache en el servidor web fue necesario realizar un playbook que despliegue 
+
