@@ -44,6 +44,12 @@ Para chequear que el inventario esta funcionando de forma correcta y que la cone
 
 Para verificar el tiempo de actividad de los servidores es necesario ejecutar el comando `ansible -i inventories/inventory.ini all -m command -a "uptime"`
 
+![Adding changes to the staging area](images/2 uptime.png)
+
+
+
+
+
 <div>
 <p align:"center">
 <img src="https://github.com/epamitaf/Obligatorio_Taller2025/blob/main/images/2%20uptime.png" alt="JuveYell" width="600px">
