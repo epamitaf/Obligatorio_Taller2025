@@ -20,7 +20,11 @@ En todos los servidores se crea el usuario sysadmin y se copia la clave publica 
 
 En primera instancia copiamos la clave publica del servidor bastion a nuestro usuario de github.
 
-
+<div>
+<p align:"center">
+<img src="https://github.com/epamitaf/Obligatorio_Taller2025/blob/main/images/SSH1.png" alt="JuveYell" width="300px">
+</p>
+</div>
 
 Creamos un repositorio publico en GitHub al que se le asigna el nombre Obligatorio_Taller2025 e inicializamos el archivo README.
 
