@@ -20,11 +20,7 @@ En todos los servidores se crea el usuario sysadmin y se copia la clave publica 
 
 En primera instancia copiamos la clave publica del servidor bastion a nuestro usuario de github.
 
-<div>
-<p align:"center">
-<img src="https://github.com/epamitaf/Obligatorio_Taller2025/blob/main/images/SSH1.png" alt="JuveYell" width="300px">
-</p>
-</div>
+![conexion ssh](images/SSH1.png)
 
 Creamos un repositorio publico en GitHub al que se le asigna el nombre Obligatorio_Taller2025 e inicializamos el archivo README.
 
@@ -36,39 +32,17 @@ Luego de realizados los cambios permitenentes, ejecutamos el comando `git add .`
 
 Para chequear que el inventario esta funcionando de forma correcta y que la conexion a los servidores indicados en este es satisfactoria, ejecutamos el comando `ansible all -i inventories/inventory.ini -m ping`
 
-<div>
-<p align:"center">
-<img src="https://github.com/epamitaf/Obligatorio_Taller2025/blob/main/images/1%20ansibleping.png" alt="JuveYell" width="500px">
-</p>
-</div>
+![ping ansible](images/ansibleping.png)
 
 Para verificar el tiempo de actividad de los servidores es necesario ejecutar el comando `ansible -i inventories/inventory.ini all -m command -a "uptime"`
 
-![Adding changes to the staging area](images/2 uptime.png)
-
-
-
-
-
-<div>
-<p align:"center">
-<img src="https://github.com/epamitaf/Obligatorio_Taller2025/blob/main/images/2%20uptime.png" alt="JuveYell" width="600px">
-</p>
-</div>
+![uotime image](images/uptime.png)
 
 Para instalar apache en los servidores web es necesario ejecutar el comando `ansible -i inventories/inventory.ini webserver -m yum -a "name=httpd" --become --ask-become-pass`
 
-<div>
-<p align:"center">
-<img src="https://github.com/epamitaf/Obligatorio_Taller2025/blob/main/images/3%20instalacion%20apache.png" alt="JuveYell" width="700px">
-</p>
-</div>
+![instalacion de apache](images/installapache.png)
 
 Para indicar el uso de espacio en disco de los servidores Ubuntu es neceario ejecutar el comando `ansible -i inventories/inventory.ini ubuntu -m command -a "df -h"`
 
-<div>
-<p align:"center">
-<img src="https://github.com/epamitaf/Obligatorio_Taller2025/blob/main/images/4%20espacio%20en%20disco%20ubuntu.png" alt="JuveYell" width="600px">
-</p>
-</div>
+![espacio en disco ubuntu](images/diskubuntu.png)
 
