@@ -34,7 +34,7 @@ Luego de realizados los cambios permitenentes, ejecutamos el comando `git add .`
 
 > ### Pruebas comandos adhoc
 
-
+Para chequear que el inventario esta funcionando de forma correcta y que la conexion a los servidores indicados en este es satisfactoria, ejecutamos el comando `ansible all -i inventories/inventory.ini -m ping`
 
 <div>
 <p align:"center">
@@ -42,7 +42,7 @@ Luego de realizados los cambios permitenentes, ejecutamos el comando `git add .`
 </p>
 </div>
 
-
+Para verificar el tiempo de actividad de los servidores es necesario ejecutar el comando `ansible -i inventories/inventory.ini all -m command -a "uptime"`
 
 <div>
 <p align:"center">
@@ -50,6 +50,7 @@ Luego de realizados los cambios permitenentes, ejecutamos el comando `git add .`
 </p>
 </div>
 
+Para instalar apache en los servidores web es necesario ejecutar el comando `ansible -i inventories/inventory.ini webserver -m yum -a "name=httpd" --become --ask-become-pass`
 
 <div>
 <p align:"center">
@@ -57,7 +58,7 @@ Luego de realizados los cambios permitenentes, ejecutamos el comando `git add .`
 </p>
 </div>
 
-
+Para indicar el uso de espacio en disco de los servidores Ubuntu es neceario ejecutar el comando `ansible -i inventories/inventory.ini ubuntu -m command -a "df -h"`
 
 <div>
 <p align:"center">
