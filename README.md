@@ -1,7 +1,7 @@
 # Obligatorio Taller de Servidores Linux
 ## - Febrero 2025 -
 
-Fatima Pereira (236544)
+Fátima Pereira (236544)
 
 ---
 ### Configuraciones iniciales
