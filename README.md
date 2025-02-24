@@ -20,7 +20,7 @@ En todos los servidores se crea el usuario sysadmin y se copia la clave publica 
 
 En primera instancia copiamos la clave publica del servidor bastion a nuestro usuario de github.
 
-![conexion ssh](images/SSH1.png)
+![conexion ssh](results/SSH1.png)
 
 Se crea un repositorio publico en GitHub con el nombre Obligatorio_Taller2025 y se inicializa el archivo README.
 
@@ -32,19 +32,19 @@ Luego de realizados los cambios permitenentes, se ejecuta el comando: `git add .
 
 Para chequear que el inventario esta funcionando de forma correcta y que la conexion a los servidores indicados en este es satisfactoria, se ejecuta el comando: `ansible all -i inventories/inventory.ini -m ping`.
 
-![ping ansible](images/ansibleping.png)
+![ping ansible](results/ansibleping.png)
 
 Para verificar el tiempo de actividad de los servidores es necesario ejecutar el comando: `ansible -i inventories/inventory.ini all -m command -a "uptime"`.
 
-![uotime image](images/uptime.png)
+![uotime image](results/uptime.png)
 
 Para instalar apache en los servidores web es necesario ejecutar el comando: `ansible -i inventories/inventory.ini webserver -m yum -a "name=httpd" --become --ask-become-pass`.
 
-![instalacion de apache](images/installapache.png)
+![instalacion de apache](results/installapache.png)
 
 Para indicar el uso de espacio en disco de los servidores Ubuntu es neceario ejecutar el comando: `ansible -i inventories/inventory.ini ubuntu -m command -a "df -h"`.
 
-![espacio en disco ubuntu](images/diskubuntu.png)
+![espacio en disco ubuntu](results/diskubuntu.png)
 
 
 > ### Creacion de Playbooks
