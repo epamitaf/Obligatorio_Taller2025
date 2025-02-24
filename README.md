@@ -1,7 +1,7 @@
 # Obligatorio Taller de Servidores Linux
 ## - Febrero 2025 -
 
-Fatima Pereira (236544), Guido Soria (215451) 
+Fatima Pereira (236544)
 
 ---
 ### Configuraciones iniciales
@@ -22,15 +22,15 @@ En primera instancia copiamos la clave publica del servidor bastion a nuestro us
 
 ![conexion ssh](images/SSH1.png)
 
-Creamos un repositorio publico en GitHub al que se le asigna el nombre Obligatorio_Taller2025 e inicializamos el archivo README.
+Se crea un repositorio publico en GitHub con el nombre Obligatorio_Taller2025 y se inicializa el archivo README.
 
-En el servidor Centos que usamos de bastion clonamos el repositorio creado anteriormente con el comando: `git clone git@github.com:epamitaf/Obligatorio_Taller2025.git` para poder tener nuestra staging area.
+En el servidor Centos usado como de bastion se clona el repositorio creado anteriormente con el comando: `git clone git@github.com:epamitaf/Obligatorio_Taller2025.git` para poder tener la staging area.
 
-Luego de realizados los cambios permitenentes, ejecutamos el comando: `git add .` agregarando los cambios realizados hasta ese momento. Una vez realizado esto, pasamos a ejecutar el comando: `git commit -m "comentario"` para indicar los cambios realizados. Luego, para realizar la sicronizacion del repositorio local con el repositorio remoto, ejecutamos el comando: `git push`.
+Luego de realizados los cambios permitenentes, se ejecuta el comando: `git add .` agregarando los cambios realizados hasta ese momento. Una vez realizado esto, se ejecuta el comando: `git commit -m "comentario"` para indicar los cambios realizados. Luego, para realizar la sicronizacion del repositorio local con el repositorio remoto, se ejecuta el comando: `git push`.
 
 > ### Pruebas comandos adhoc
 
-Para chequear que el inventario esta funcionando de forma correcta y que la conexion a los servidores indicados en este es satisfactoria, ejecutamos el comando: `ansible all -i inventories/inventory.ini -m ping`.
+Para chequear que el inventario esta funcionando de forma correcta y que la conexion a los servidores indicados en este es satisfactoria, se ejecuta el comando: `ansible all -i inventories/inventory.ini -m ping`.
 
 ![ping ansible](images/ansibleping.png)
 
