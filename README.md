@@ -78,6 +78,4 @@ Para poder cambiar la configuracion a nivel de firewall de los servidores Ubuntu
 
 
 
-COSAS PARA AGREGAR A ESTE INSTRUCTIVO!!! 
-Detallas las colecciones usadas y el comanod para instalarla.
 
