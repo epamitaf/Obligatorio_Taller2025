@@ -69,6 +69,9 @@ Para poder instalar y configurar apache en el servidor web fue necesario realiza
 ![ejecucion playbook websetup](results/web_setup.png)
 
 
+Accedemos sin problemas a www.ejemplo.com.uy
+
+![acceso ejemplo com uy](results/ejemplocomuy.png)
 
 
 > ### hardening.yml
