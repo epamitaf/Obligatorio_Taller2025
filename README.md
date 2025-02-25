@@ -25,14 +25,14 @@ En primera instancia copiamos la clave pública del servidor bastión a nuestro 
 
 Se crea un repositorio público en GitHub con el nombre Obligatorio_Taller2025 y se inicializa el archivo README.
 
-En el servidor Centos usado como de bastión se clona el repositorio creado anteriormente con el comando: `git clone git@github.com:epamitaf/Obligatorio_Taller2025.git` para poder tener la staging area.
+En el servidor Centos usado como de bastión se clona el repositorio con el comando: `git clone git@github.com:epamitaf/Obligatorio_Taller2025.git` para poder tener la staging area.
 
-Luego de realizados los cambios pertinentes, se ejecuta el comando: `git add .` agregando los cambios realizados hasta ese momento. Una vez realizado esto, se ejecuta el comando: `git commit -m "comentario"` para indicar los cambios realizados. Luego, para realizar la sincronización del repositorio local con el repositorio remoto, se ejecuta el comando: `git push`.
+Luego de realizados los cambios pertinentes, se ejecuta el comando: `git add .` agregando los cambios realizados hasta ese momento. Una vez realizado esto, se ejecuta el comando: `git commit -m "comentario"` para indicar una referencia de los cambios realizados. Y luego, para realizar la sincronización del repositorio local con el repositorio remoto, se ejecuta el comando: `git push`.
 
 
 > ### Pruebas comandos adhoc
 
-Para chequear que el inventario está funcionando de forma correcta y que la conexión a los servidores indicados en este es satisfactoria, se ejecuta el comando: `ansible all -i inventories/inventory.ini -m ping`.
+Para chequear que el inventario está funcionando de forma correcta y que la conexión a los servidores indicados en éste es satisfactoria, se ejecuta el comando: `ansible all -i inventories/inventory.ini -m ping`.
 
 ![ping ansible](results/ansibleping.png)
 
@@ -57,7 +57,7 @@ Para indicar el uso de espacio en disco de los servidores Ubuntu es necesario ej
 
 > ### Creacion de Playbooks
 
-Para poder hacer uso de estos playbook es necesario instalar de forma previa los las colecciones y módulos a usar en estos. Para esto es necesario ejecutar el siguiente comando: `ansible-galaxy install -r collections/requirements.yml`.
+Para poder hacer uso de estos playbook es necesario instalar de forma previa los las colecciones y módulos a usar en estos. Para esto es necesario ejecutar el comando: `ansible-galaxy install -r collections/requirements.yml`.
 
 Esta instrucción instala los módulos ansible.posix y community.general que serán usados en distintas partes de los playbooks.
 
