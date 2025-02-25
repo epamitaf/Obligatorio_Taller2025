@@ -8,7 +8,7 @@ Ansible es una herramienta de automatización que permite gestionar diferentes e
 La diferencia principal radica en su propósito y complejidad, además de la forma en la que son ejecutados. Los comandos ad-hoc son ejecuciones rápidas de una única tarea, mientras que los playbooks son un conjunto de instrucciones que permiten automatizar tareas complejas y pueden ser reutilizables.
 
 
-### ¿Que es la idempotencia y por qué es importante en Ansible?
+### ¿Qué es la idempotencia y por qué es importante en Ansible?
 
 Una operación se considera idempotente si el resultado de ejecutarla una sola vez es exactamente el mismo que ejecutarla repetidas veces. En Ansible es importante porque asegura que las tareas definidas no causen cambios innecesarios en caso de haber sido aplicados de forma previa ya que la ejecución de la misma tarea múltiples veces no generara nuevos efectos.
 
