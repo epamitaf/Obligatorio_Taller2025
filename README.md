@@ -64,7 +64,7 @@ Esta instruccion instala los mudulos ansible.posix y community.general que seran
 
 Para poder instalar y configurar apache en el servidor web fue necesario realizar un playbook que instale Apache en los servidoes que se encuentran bajo el grupo de servidores web, habilitando su trafico http a nivel de firewall y configurando un virtuahost con su respectivo despliegue de una web personalizada para este caso.
 
-![ejecucion playbook websetup](results/websetup.png)
+![ejecucion playbook websetup](results/web_setup.png)
 
 
 
@@ -74,7 +74,7 @@ Para poder instalar y configurar apache en el servidor web fue necesario realiza
 Para poder cambiar la configuracion a nivel de firewall de los servidores Ubuntu fue necesario realizar un playbook que bloquee el trafico entrante, permitiendo solamente conexiones ssh, asegurando que la clave publica del servidor que se conectara se encuentre en este y que el login solo pueda realizarse con claves publico/privadas. 
 
 
-![ejecucion playbook websetup](results/hardening.png)
+![ejecucion playbook hardening](results/hardening.png)
 
 
 
